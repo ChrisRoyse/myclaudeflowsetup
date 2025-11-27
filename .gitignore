@@ -1,1 +1,24 @@
-# Temporarily empty to push all files
+# Claude Flow Blueprint - Ignore Template
+# This .gitignore is designed for blueprint repositories
+# Only docs/ and docs2/ directories will be tracked for documentation
+# All other blueprint structure is ignored for new projects
+
+# Ignore all blueprint directories
+.agentdb/
+.claude/
+.claude-flow/
+.hive-mind/
+.serena/
+.swarm/
+config/
+coordination/
+memory/
+# serena/ - Now tracked in repository (commented out after adding complete codebase)
+
+# Ignore blueprint configuration files
+.mcp.json
+CLAUDE.md
+claude-flow
+
+# Keep documentation directories
+# docs/ and docs2/ are NOT ignored and will be tracked
