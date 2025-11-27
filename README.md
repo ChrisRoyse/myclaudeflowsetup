@@ -175,22 +175,42 @@ Confirm all systems are operational."
 
 ## ⚠️ Critical Setup Requirements
 
-### 1. **ALWAYS Include CLAUDE.md in Your Prompts**
+### 1. **ALWAYS Include claudeflow.md in Your Prompts**
 
-**This is the most important rule.** When starting any project with Claude Code, you **MUST** reference the `CLAUDE.md` configuration file:
+**This is the most important rule.** When starting any project with Claude Code, you **MUST** reference the `docs2/claudeflow.md` configuration file in this repository:
 
 ```
-"Please read CLAUDE.md and follow all instructions within it for this project."
+"Please read \\wsl.localhost\Ubuntu-20.04\home\cabdru\claudeflowblueprint\docs2\claudeflow.md and follow all instructions within it for this project."
 ```
 
-The `CLAUDE.md` file contains:
-- Concurrent execution patterns (CRITICAL for performance)
-- File organization rules (prevents root folder clutter)
-- Agent execution protocols
-- Memory coordination strategies
-- Performance optimization guidelines
+**For Windows WSL users, use the WSL path format shown above.**
 
-**Without CLAUDE.md, you'll lose 2.8-4.4x performance gains and proper file organization.**
+**For Linux/Mac users:**
+```
+"Please read /home/cabdru/claudeflowblueprint/docs2/claudeflow.md and follow all instructions within it for this project."
+```
+
+**Or use relative path from your cloned repository:**
+```
+"Please read docs2/claudeflow.md and follow all instructions within it for this project."
+```
+
+The `docs2/claudeflow.md` file contains the **Universal Development Guide** with:
+- ⚠️ **99.9% Sequential Execution Rule** - Critical coordination pattern
+- 🔮 **Forward-Looking Subagent Coordination** - Future agent context
+- 💾 **AgentDB ReasoningBank Integration** - Adaptive learning
+- 🎯 **Correct Memory Store Syntax** - Positional arguments (prevents errors)
+- 📁 **File Organization Rules** - Prevents root folder clutter
+- 🚀 **Performance Optimization** - 2.8-4.4x speed improvements
+- 🧠 **Memory Coordination Strategies** - Cross-agent communication
+
+**Without claudeflow.md, you'll:**
+- ❌ Use incorrect parallel execution (99.9% of tasks need sequential)
+- ❌ Get "Usage: memory store" errors (wrong syntax)
+- ❌ Miss forward-looking coordination (agents won't prepare for future agents)
+- ❌ Lose AgentDB reasoning bank benefits
+- ❌ Experience poor file organization
+- ❌ Lose 2.8-4.4x performance gains
 
 ### 2. File Path Updates Required
 
@@ -226,9 +246,9 @@ By default, Claude Flow stores documentation in `/docs` folder. To change this:
 
 ## 🧩 Core Components
 
-### CLAUDE.md Configuration
+### docs2/claudeflow.md Configuration
 
-The `CLAUDE.md` file is your **primary configuration**. It defines:
+The `docs2/claudeflow.md` file is your **primary configuration**. It defines:
 
 1. **Concurrent Execution Rules** - All related operations in ONE message
 2. **File Organization** - Never save to root folder
@@ -236,7 +256,7 @@ The `CLAUDE.md` file is your **primary configuration**. It defines:
 4. **Memory Coordination** - Cross-session persistence
 5. **Performance Optimization** - 2.8-4.4x speed improvements
 
-**Key Patterns from CLAUDE.md:**
+**Key Patterns from docs2/claudeflow.md:**
 
 ```javascript
 // ✅ CORRECT: Batch all operations in single message
@@ -578,8 +598,13 @@ Serena is configured via `.serena/project.yml` and supports:
 
 ```
 claudeflowblueprint/
-├── CLAUDE.md                    # ⚠️ CRITICAL: Main configuration (include in all prompts)
 ├── README.md                    # This file
+├── CLAUDE.md                    # Original Claude Code configuration (legacy)
+├── docs2/                       # ⚠️ CRITICAL DOCUMENTATION
+│   ├── claudeflow.md            # ⚠️ INCLUDE IN ALL PROMPTS - Universal Development Guide
+│   ├── usacfsearches.md         # ⚠️ USACF framework part 1
+│   ├── usacfsearches2.md        # ⚠️ USACF framework part 2
+│   └── agent_headers_extract.txt # ⚠️ All agent headers (UPDATE PATHS)
 ├── .claude/                     # Claude Code configuration
 │   ├── agents/                  # All specialized agents
 │   │   ├── business-research/   # Strategic business agents
@@ -592,10 +617,6 @@ claudeflowblueprint/
 │   │   └── [30+ other categories]
 │   ├── hooks/                   # Pre/post operation hooks
 │   └── settings.json            # Claude Code settings
-├── docs2/                       # USACF documentation
-│   ├── usacfsearches.md         # ⚠️ USACF framework part 1
-│   ├── usacfsearches2.md        # ⚠️ USACF framework part 2
-│   └── agent_headers_extract.txt # ⚠️ All agent headers (UPDATE PATHS)
 ├── docs/                        # Default documentation output
 ├── serena/                      # Serena MCP codebase
 │   ├── README.md                # Serena documentation
@@ -631,9 +652,9 @@ claudeflowblueprint/
 
 ### Starting a New Project
 
-**1. Reference CLAUDE.md:**
+**1. Reference docs2/claudeflow.md:**
 ```
-"Read CLAUDE.md and follow all instructions for this project."
+"Read docs2/claudeflow.md and follow all instructions for this project."
 ```
 
 **2. Choose Your Agent System:**
@@ -659,7 +680,7 @@ analyzing [YOUR TASK] using optimal USACF methods."
 I need to analyze the competitive landscape for [PRODUCT].
 
 Please:
-1. Read CLAUDE.md for execution patterns
+1. Read docs2/claudeflow.md for execution patterns
 2. Use agents from .claude/agents/business-research/
 3. Start with strategic-researcher to gather data
 4. Use competitive-intelligence to map alternatives
@@ -673,7 +694,7 @@ Please:
 I'm writing a systematic literature review on [TOPIC].
 
 Please:
-1. Read CLAUDE.md for concurrent execution
+1. Read docs2/claudeflow.md for concurrent execution
 2. Use agents from .claude/agents/phdresearch/
 3. Start with literature-mapper (read docs2/usacfsearches.md for methodology)
 4. Use systematic-reviewer for PRISMA compliance
@@ -688,7 +709,7 @@ Please:
 Conduct authorized penetration test on [AUTHORIZED TARGET].
 
 Please:
-1. Read CLAUDE.md for execution coordination
+1. Read docs2/claudeflow.md for execution coordination
 2. Use agents from .claude/agents/pentestsystem/
 3. Start with passive-reconnaissance-specialist
 4. Progress through active-reconnaissance-specialist
@@ -775,11 +796,11 @@ Note: Update file paths from /home/cabdru/clag/ to /my/actual/path/ before using
 
 ## 💡 Best Practices
 
-### 1. Always Include CLAUDE.md
+### 1. Always Include docs2/claudeflow.md
 
 **DO THIS:**
 ```
-"Read and follow CLAUDE.md for this project."
+"Read and follow docs2/claudeflow.md for this project."
 ```
 
 **NOT THIS:**
@@ -1062,7 +1083,7 @@ uvx --from git+https://github.com/oraios/serena serena start-mcp-server --help
 
 **Solution:**
 ```
-1. Check CLAUDE.md for concurrent execution patterns
+1. Check docs2/claudeflow.md for concurrent execution patterns
 2. Batch ALL independent operations in ONE message
 3. Use parallel Task tool calls
 4. Verify MCP coordination is enabled
@@ -1191,7 +1212,7 @@ Claude Flow is an innovative multi-agent orchestration framework that revolution
 
 For support and questions:
 
-1. **Read CLAUDE.md** - Most questions answered here
+1. **Read docs2/claudeflow.md** - Most questions answered here
 2. **Check USACF docs** - `docs2/usacfsearches.md`
 3. **Review agent headers** - `docs2/agent_headers_extract.txt`
 4. **GitHub Issues** - Report bugs and request features
@@ -1199,6 +1220,6 @@ For support and questions:
 
 ---
 
-**Remember:** Always include `CLAUDE.md` in your prompts and update file paths in `agent_headers_extract.txt` to match your project structure.
+**Remember:** Always include `docs2/claudeflow.md` in your prompts and update file paths in `agent_headers_extract.txt` to match your project structure.
 
 **Happy Building! 🚀**
