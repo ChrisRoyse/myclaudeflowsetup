@@ -96,7 +96,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 ### Verify and Initialize Systems
 
-After adding MCP servers, you need to ensure all systems are properly initialized and working:
+After cloning the repo you need to ensure all systems are properly initialized and working:
 
 #### Step 1: Ask Claude Code to Setup Core Systems
 
@@ -1733,6 +1733,7 @@ For support and questions:
 **Remember:** Always include `docs2/claudeflow.md` in your prompts and update file paths in `agent_headers_extract.txt` to match your project structure.
 
 **Happy Building! 🚀**
+
 
 
 
