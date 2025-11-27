@@ -99,20 +99,18 @@ Configure the MCP servers to work with this blueprint:
 ```bash
 # Add Claude Flow MCP (REQUIRED)
 # This enables multi-agent orchestration
-claude mcp add claude-flow npx claude-flow@alpha mcp start
+Tell Claude Code to make sure the AgentDB Reasoning bank and Claude Flow Memory system are working
 
 # Add Serena MCP (REQUIRED for code analysis)
 # This enables symbol-level code navigation
-claude mcp add serena uvx --from git+https://github.com/oraios/serena serena start-mcp-server
+Tell Claude Code to get the Serena MCP server working
 
 # Add ruv-swarm (RECOMMENDED for enhanced coordination)
-claude mcp add ruv-swarm npx ruv-swarm mcp start
+If ruv-swarm isn't working, tell claude code to get it working.
 
 # Optional: Cloud-based features
 claude mcp add flow-nexus npx flow-nexus@latest mcp start
 ```
-
-**Note:** The MCP servers provide the runtime execution environment, while this repository provides the pre-configured agents, workflows, and documentation.
 
 ### Verify and Initialize Systems
 
@@ -1753,4 +1751,5 @@ For support and questions:
 **Remember:** Always include `docs2/claudeflow.md` in your prompts and update file paths in `agent_headers_extract.txt` to match your project structure.
 
 **Happy Building! 🚀**
+
 
